@@ -1,0 +1,262 @@
+<!-- This is an HTML document -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character encoding to UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Set the viewport for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the HTML document to "Document" -->
+    <title>Document</title>
+    <!-- Load the Leaflet CSS library from an external source -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <!-- Define some custom styles using inline CSS -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0 auto;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            filter: saturate(232%);
+        }
+
+        /* Define a dashed-line class with animation properties */
+        .dashed-line {
+            stroke-dasharray: 8;
+            stroke-dashoffset: 0;
+            animation: dashAnimation 1s linear infinite;
+        }
+
+        /* Define a shadow-line class with animation properties */
+        .shadow-line {
+            stroke-dasharray: 8;
+            stroke-dashoffset: 0;
+            animation: dashAnimation 1s linear infinite;
+        }
+
+        /* Define a keyframes animation for the dashAnimation class */
+        @keyframes dashAnimation {
+            to {
+                stroke-dashoffset: -16;
+            }
+        }
+
+        /* Define a label class with some styling properties */
+        .label {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 16px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a main element with an ID of "map" for the Leaflet map to be rendered -->
+    <main id="map"></main>
+    <!-- Load the Leaflet JavaScript library from an external source -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Start of JavaScript code -->
+    <script>
+        // Create a Leaflet map object with certain configuration options
+        const map = L.map("map", { fadeAnimation: true, zoomAnimation: true });
+
+        // Create a Carto Voyager tile layer and add it to the map
+        const cartoVoyager = L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+            attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors &copy; <a href='https://carto.com/attributions'>CARTO</a>",
+            subdomains: "abcd",
+            maxZoom: 16,
+        });
+        cartoVoyager.addTo(map);
+
+        // Define maximum and minimum sizes for icons
+        const maxSize = [
+            {
+                air: { size: [50, 50] },
+                loc: { size: [40, 40] },
+                shd: { size: [25, 25] }
+            }
+        ];
+        const minSize = [
+            { size: [0, 0] }
+        ];
+
+        // Create a location icon with certain properties
+        const locationIcon = L.icon({
+            iconUrl: "img/location.svg",
+            iconSize: maxSize[0].loc.size,
+            iconRotate: true
+        });
+
+        // Define some locations as latitude and longitude coordinates
+        const locations = [
+            [25, 55], [45, 65], [41, -5]
+        ];
+
+        // Create location markers for each location and add them to the map
+        const locationMarkers = [];
+        locations.forEach((coords, index) => {
+            const marker = L.marker(coords, {
+                icon: locationIcon,
+                opacity: index === 0 ? 1 : 0
+            }).addTo(map);
+            locationMarkers.push(marker);
+        });
+
+        // Define labels with their respective coordinates
+        const labels = [
+            { coords: [25, 58], label: "Dubai" },
+            { coords: [41, -12.5], label: "Madrid" }
+        ];
+
+        // Create label markers for each label and add them to the map
+        const labelMarkers = [];
+        labels.forEach((location, index) => {
+            const labelIcon = L.divIcon({
+                className: "label",
+                html: location.label
+            });
+            const marker = L.marker(location.coords, {
+                icon: labelIcon,
+                opacity: index === 0 ? 1 : 0
+            }).addTo(map);
+            labelMarkers.push(marker);
+        });
+
+        // Create airplane and shadowplane icons with their respective properties
+        const airplaneIcon = L.icon({
+            iconSize: minSize[0].size,
+            iconUrl: "img/airplane.svg",
+            iconRotate: true
+        });
+        const airplane = L.marker(locations[0], {
+            icon: airplaneIcon,
+            zIndexOffset: 1000
+        }).addTo(map);
+        const shadowplaneIcon = L.icon({
+            iconSize: minSize[0].size,
+            iconUrl: "img/shadowplane.svg",
+            iconRotate: true
+        });
+        const shadowplane = L.marker(locations[0], {
+            icon: shadowplaneIcon
+        }).addTo(map);
+
+        // Create dashed and shadow lines on the map with their respective properties
+        const dashedLine = L.polyline([], {
+            color: "#F62728",
+            weight: 2,
+            className: "dashed-line"
+        }).addTo(map);
+        const shadowLine = L.polyline([], {
+            color: "#88888880",
+            weight: 2,
+            className: "shadow-line"
+        }).addTo(map);
+
+        // Function to calculate control points for a Bezier curve animation
+        function calculateControlPoints(locations) {
+            const controlPoints = [];
+            for (let i = 1; i < locations.length - 1; i++) {
+                const prevLat = locations[i - 1][0];
+                const prevLng = locations[i - 1][1];
+                const nextLat = locations[i + 1][0];
+                const nextLng = locations[i + 1][1];
+                const controlLat = locations[i][0] + (nextLat - prevLat) * 0.5;
+                const controlLng = locations[i][1] + (nextLng - prevLng) * 0.5;
+                controlPoints.push([controlLat, controlLng]);
+            }
+            return controlPoints;
+        }
+
+        // Calculate control points for the Bezier curve animation
+        const controlPoints = calculateControlPoints(locations);
+
+        // Set up animation parameters
+        const numberOfSteps = 240;
+        const tStep = 1 / numberOfSteps;
+        let t = 0;
+        const p0 = locations[0];
+        const p2 = locations[locations.length - 1];
+        map.setView(p0, 2);
+        map.flyTo(p0, 4, {
+            duration: 3,
+        });
+
+        // Start the animation after a delay of 3000ms (3 seconds)
+        setTimeout(() => {
+            const animationInterval = setInterval(() => {
+                // Check if the animation is complete
+                if (t >= 1) {
+                    // End the animation and update the marker and icon properties
+                    clearInterval(animationInterval);
+                    locationMarkers[locations.length - 1]._icon.style.transition = "0.4s ease-in";
+                    locationMarkers[locations.length - 1].setOpacity(1);
+                    labelMarkers[labels.length - 1]._icon.style.transition = "0.4s ease-in";
+                    labelMarkers[labels.length - 1].setOpacity(1);
+                    airplane._icon.style.transition = "0.2s ease-in";
+                    airplaneIcon.options.iconSize = minSize[0].size;
+                    airplane.setIcon(airplaneIcon);
+                    shadowplane._icon.style.transition = "0.2s ease-in";
+                    shadowplaneIcon.options.iconSize = minSize[0].size;
+                    shadowplane.setIcon(shadowplaneIcon);
+                } else {
+                    // Continue the animation by updating airplane and shadowplane positions
+                    airplane._icon.style.transition = "0.2s ease-out";
+                    airplaneIcon.options.iconSize = maxSize[0].air.size;
+                    airplane.setIcon(airplaneIcon);
+
+                    // Calculate new latitude and longitude for the airplane
+                    const lat = Math.pow(1 - t, 2) * p0[0] + 2 * (1 - t) * t * controlPoints[0][0] + Math.pow(t, 2) * p2[0];
+                    const lng = Math.pow(1 - t, 2) * p0[1] + 2 * (1 - t) * t * controlPoints[0][1] + Math.pow(t, 2) * p2[1];
+                    airplane.setLatLng([lat, lng]);
+
+                    // Continue the animation by updating shadowplane properties
+                    shadowplane._icon.style.transition = "0.2s ease-out";
+                    if (t <= 0.5) {
+                        const shadowSize = maxSize[0].shd.size.map((dim, idx) => {
+                            return dim - (dim - minSize[0].size[idx]) * ((t - 0.5) * 2);
+                        });
+                        shadowplaneIcon.options.iconSize = shadowSize;
+                    } else {
+                        const shadowSize = minSize[0].size.map((dim, idx) => {
+                            return dim + (maxSize[0].shd.size[idx] - dim) * (t * 2);
+                        });
+                        shadowplaneIcon.options.iconSize = shadowSize;
+                    }
+                    shadowplane.setIcon(shadowplaneIcon);
+
+                    // Continue the animation by updating shadowplane position
+                    const slat = p0[0] + (p2[0] - p0[0]) * t;
+                    const slng = p0[1] + (p2[1] - p0[1]) * t;
+                    shadowplane.setLatLng([slat, slng]);
+
+                    // Pan the map to the new airplane position
+                    map.panTo([lat, lng]);
+
+                    // Add new points to the dashed and shadow lines
+                    setTimeout(() => {
+                        dashedLine.addLatLng([lat, lng]);
+                        shadowLine.addLatLng([slat, slng]);
+                    }, 144);
+
+                    // Increment the animation step
+                    t += tStep;
+                }
+            }, 16);
+        }, 3000);
+
+        // Add a scale control to the map
+        L.control.scale().addTo(map);
+    </script>
+</body>
+</html>
