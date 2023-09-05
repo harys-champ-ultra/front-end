@@ -6,6 +6,7 @@
     - Tables
     - Forms
     - Semantic HTML
+
 - CSS/SCSS + UI/UX
     - Syntax and Selectors
     - Visual Rules
@@ -18,6 +19,7 @@
     - Transitions
     - Variables and Functions
     - Accessibility
+
 - JavaScript Basic
     - Conditionals
     - Functions
@@ -29,12 +31,14 @@
 
 ## Development
 - Next Step Designing + UI/UX
+
 - JavaScript Advance
     - Classes
     - Modules
     - Requests
     - JavaScript Interactive Websites
     - DOM Events with JavaScript
+
 - React
     - JSX
     - React Components
@@ -43,6 +47,7 @@
     - React Programming Patterns
     - React Styles
     - React Forms
+
 - TypeScript
     - Types
     - Functions
