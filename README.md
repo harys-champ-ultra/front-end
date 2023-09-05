@@ -7,5 +7,6 @@
 - JavaScript Basic
 
 ## Development
+- Next Step Designing
 - JavaScript Advance
 - React
