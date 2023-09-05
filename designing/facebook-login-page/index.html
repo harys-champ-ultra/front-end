@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - log in or sign up</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="images/facebook-icon.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="wrapper-hero" id="signin">
+        <div class="hero-content">
+            <div class="content-left">
+                <div class="left-side">
+                    <img src="images/dF5SId3UHWd.svg" alt="facebook">
+                    <h2>Facebook helps you connect and share with the people in your life.</h2>
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="right-side">
+                    <form action="#" method="post">
+                        <input type="email" name="email" id="email" placeholder="Email address or phone number" required>
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <input type="submit" value="Log In">
+                        <a href="#">Forgotten password?</a>
+                        <hr>
+                        <button onclick="signUp();">Create New Account</button>
+                    </form>
+                    <br>
+                    <span><a href="#">Create a Page</a> for a celebrity, brand or business.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper-hero" style="display: none;" id="signup">
+        <div class="hero-content">
+            <div class="content-left">
+                <div class="left-side">
+                    <img src="images/dF5SId3UHWd.svg" alt="facebook">
+                    <h2>Facebook helps you connect and share with the people in your life.</h2>
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="right-side">
+                    <form action="#" method="post">
+                        <input type="text" name="firstname" id="firstname" placeholder="First name" required>
+                        <input type="email" name="email" id="email" placeholder="Mobile number or email address" required>
+                        <input type="password" name="password" id="password" placeholder="New password" required>
+                        <input type="date" name="date" id="date" placeholder="Date of birth" required>
+                        <input type="submit" value="Sign Up" class="signup">
+                        <hr>
+                        <button onclick="signIn();" class="signin">Already Account?</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper-hero {
+    background-color: #F0F2F5;
+    height: 100vh;
+    .hero-content {
+        padding: 0 56px;
+        max-width: 1080px;
+        margin: 0 auto;
+        .content-left {
+            float: left;
+            width: 50%;
+            display: grid;
+            align-items: center;
+            height: 100vh;
+            img {
+                height: 106px;
+                margin: -35px -28px;
+            }
+            h2 {
+                font-size: 28px;
+                font-weight: 500;
+                color: #1C1E21;
+            }
+        }
+        .content-right {
+            float: left;
+            width: 50%;
+            display: grid;
+            align-items: center;
+            height: 100vh;
+            justify-content: right;
+            .right-side {
+                text-align: center;
+                form {
+                    font-family: Arial, Helvetica, sans-serif;
+                    background-color: #ffffff;
+                    display: grid;
+                    padding: 8px 16px;
+                    border-radius: 8px;
+                    width: 400px;
+                    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+                    input, button {
+                        margin: 8px auto;
+                        border-radius: 6px;
+                        padding: 14px 16px;
+                        font-size: 18px;
+                        border: 1px solid #dddddd;
+                        width: 100%;
+                    }
+                    input {
+                        color: #1C1E21;
+                    }
+                    input[type=submit] {
+                        background-color: #1877F2;
+                        border: 0;
+                        color: #ffffff;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                    input[type=submit]:hover {
+                        background-color: #0a68e4;
+                    }
+                    input[type=submit].signup {
+                        background-color: #42B72A;
+                        border: 0;
+                        color: #ffffff;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                    input[type=submit].signup:hover {
+                        background-color: #36A420;
+                    }
+                    input:focus {
+                        outline: 0;
+                        border: 1px solid #1877F2;
+                        background-color: #E8F0FE;
+                    }
+                    input[type=submit]:focus {
+                        border: 0;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #1877F2;
+                        font-size: 14px;
+                        margin: 8px 0;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                        color: #0a68e4;
+                    }
+                    hr {
+                        width: 100%;
+                        border: 0;
+                        height: 1px;
+                        background-color: #dddddd;
+                    }
+                    button {
+                        background-color: #42B72A;
+                        cursor: pointer;
+                        border: 0;
+                        color: #ffffff;
+                        font-weight: 600;
+                        width: 60%;
+                    }
+                    button.signin {
+                        background-color: #1877F2;
+                        cursor: pointer;
+                        border: 0;
+                        color: #ffffff;
+                        font-weight: 600;
+                        width: 60%;
+                    }
+                    button:focus {
+                        outline: 0;
+                    }
+                    button:hover {
+                        background-color: #36A420;
+                    }
+                    button.signin:hover {
+                        background-color: #0a68e4;
+                    }
+                }
+                span {
+                    font-size: 14px;
+                    color: #1C1E21;
+                    a {
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: #1C1E21;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .content-center {
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            .center-side {
+                width: 100%;
+                img {
+                    height: 84.84px;
+                    margin: -4px -28px;
+                }
+                form {
+                    font-family: Arial, Helvetica, sans-serif;
+                    background-color: #ffffff;
+                    display: grid;
+                    padding: 8px 16px;
+                    border-radius: 8px;
+                    width: 400px;
+                    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+                    p {
+                        font-size: 18px;
+                        color: #1C1E21;
+                    }
+                    input, button {
+                        margin: 8px auto;
+                        border-radius: 6px;
+                        padding: 14px 16px;
+                        font-size: 18px;
+                        border: 1px solid #dddddd;
+                        width: 100%;
+                    }
+                    input {
+                        color: #1C1E21;
+                    }
+                    input[type=submit] {
+                        background-color: #1877F2;
+                        border: 0;
+                        color: #ffffff;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                    input[type=submit]:hover {
+                        background-color: #0a68e4;
+                    }
+                    input:focus {
+                        outline: 0;
+                        border: 1px solid #1877F2;
+                        background-color: #E8F0FE;
+                    }
+                    input[type=submit]:focus {
+                        border: 0;
+                    }
+                    span {
+                        font-size: 14px;
+                        color: #f02849;
+                        margin: 4px 0;
+                        text-align: left;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #1877F2;
+                        font-size: 14px;
+                        margin: 8px 0;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                        color: #0a68e4;
+                    }
+                    hr {
+                        width: 100%;
+                        border: 0;
+                        height: 1px;
+                        background-color: #dddddd;
+                    }
+                    button {
+                        background-color: #42B72A;
+                        cursor: pointer;
+                        border: 0;
+                        color: #ffffff;
+                        font-weight: 600;
+                        width: 60%;
+                    }
+                    button:focus {
+                        outline: 0;
+                    }
+                    button:hover {
+                        background-color: #36A420;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper-hero {
+        .hero-content {
+            padding: 0 24px;
+            .content-left {
+                h2 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 809px) {
+    .wrapper-hero {
+        display: grid;
+        align-items: center;
+        .hero-content {
+            .content-left, .content-right {
+                text-align: center;
+                float: none;
+                width: 100%;
+                height: auto;
+                img {
+                    height: 84.84px;
+                }
+            }
+            .content-right {
+                display: block;
+                .right-side {
+                    form {
+                        width: 100%;
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 448px) {
+    .wrapper-hero {
+        .hero-content {
+            .content-center {
+                width: 100%;
+                .center-side {
+                    form {
+                        width: 100%;
+                        button {
+                            width: 100%;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
