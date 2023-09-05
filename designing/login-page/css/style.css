@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  transition: 0.08s;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #F9F9F9;
+}
+
+.wrapper-container {
+  align-items: center;
+  display: flex;
+}
+.wrapper-container .container-content {
+  width: 50%;
+}
+.wrapper-container .container-content .content-description {
+  padding: 24px 96px;
+}
+.wrapper-container .container-content .content-description h1 {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 600;
+}
+.wrapper-container .container-content .content-description p {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+.wrapper-container .container-content .content-description p a {
+  color: #000000;
+  font-weight: 600;
+  text-decoration: none;
+}
+.wrapper-container .container-content .content-description p a:hover {
+  text-decoration: underline;
+}
+.wrapper-container .container-content .content-description .description-form {
+  display: grid;
+  margin: 24px 0;
+}
+.wrapper-container .container-content .content-description .description-form input {
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.16);
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 8px 0;
+  padding: 16px 24px;
+  width: 100%;
+}
+.wrapper-container .container-content .content-description .description-form input:focus {
+  outline: 0;
+}
+.wrapper-container .container-content .content-description .description-form input[type=checkbox] {
+  width: unset;
+}
+.wrapper-container .container-content .content-description .description-form .form-box {
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.16);
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  padding: 16px 24px;
+}
+.wrapper-container .container-content .content-description .description-form .form-box label {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+}
+.wrapper-container .container-content .content-description .description-form .form-split {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+.wrapper-container .container-content .content-description .description-form .form-split label {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+.wrapper-container .container-content .content-description .description-form .form-split a {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.wrapper-container .container-content .content-description .description-form .form-split a:hover {
+  text-decoration: underline;
+}
+.wrapper-container .container-content .content-description .description-form button {
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: center;
+  margin: 8px 0;
+  padding: 16px 24px;
+  width: 100%;
+}
+.wrapper-container .container-content .content-description .description-form button.black {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.wrapper-container .container-content .content-description .description-form button.white {
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.16);
+  color: #000000;
+}
+.wrapper-container .container-content .content-description .description-form button.blue {
+  background-color: #4267B2;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.16);
+  color: #FFFFFF;
+}
+.wrapper-container .container-content .content-description .description-form button:focus {
+  outline: 0;
+}
+.wrapper-container .container-content .content-description .description-form button:hover {
+  transform: scale(0.96);
+}
+.wrapper-container .container-hero {
+  height: 100vh;
+  padding: 24px 24px;
+  width: 50%;
+}
+.wrapper-container .container-hero .hero-description {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%), url("../img/hero.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+  height: 100%;
+  padding: 16px 24px;
+  display: flex;
+  align-items: flex-end;
+}
+.wrapper-container .container-hero .hero-description .description-content h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 600;
+}
+.wrapper-container .container-hero .hero-description .description-content p {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper-container .container-content {
+    width: 60%;
+  }
+  .wrapper-container .container-content .content-description {
+    padding: 24px 48px;
+  }
+  .wrapper-container .container-hero {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper-container .container-content {
+    width: 100%;
+  }
+  .wrapper-container .container-content .content-description {
+    padding: 48px 24px;
+  }
+  .wrapper-container .container-content .content-description .description-form input, .wrapper-container .container-content .content-description .description-form button {
+    padding: 16px 16px;
+  }
+  .wrapper-container .container-content .content-description .description-form .form-split {
+    align-items: flex-start;
+    gap: 8px 0;
+    flex-direction: column;
+  }
+  .wrapper-container .container-hero {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    transition: 0.08s;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #F9F9F9;
+}
+
+.wrapper-container {
+    align-items: center;
+    display: flex;
+    .container-content {
+        width: 50%;
+        .content-description {
+            padding: 24px 96px;
+            h1 {
+                color: #000000;
+                font-size: 24px;
+                font-weight: 600;
+            }
+            p {
+                color: #000000;
+                font-size: 16px;
+                font-weight: 400;
+                a {
+                    color: #000000;
+                    font-weight: 600;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .description-form {
+                display: grid;
+                margin: 24px 0;
+                input {
+                    background-color: #FFFFFF;
+                    border: 0;
+                    border-radius: 8px;
+                    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.16);
+                    color: #000000;
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin: 8px 0;
+                    padding: 16px 24px;
+                    width: 100%;
+                    &:focus {
+                        outline: 0;
+                    }
+                    &[type=checkbox] {
+                        width: unset;
+                    }
+                }
+                .form-box {
+                    align-items: center;
+                    background-color: #FFFFFF;
+                    border-radius: 8px;
+                    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.16);
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 8px 0;
+                    padding: 16px 24px;
+                    label {
+                        color: #000000;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+                .form-split {
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 8px 0;
+                    label {
+                        color: #000000;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                    a {
+                        color: #000000;
+                        font-size: 16px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                button {
+                    align-items: center;
+                    border: 0;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    display: flex;
+                    font-size: 16px;
+                    font-weight: 500;
+                    justify-content: center;
+                    margin: 8px 0;
+                    padding: 16px 24px;
+                    width: 100%;
+                    &.black {
+                        background-color: #000000;
+                        color: #FFFFFF;
+                    }
+                    &.white {
+                        background-color: #FFFFFF;
+                        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.16);
+                        color: #000000;
+                    }
+                    &.blue {
+                        background-color: #4267B2;
+                        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.16);
+                        color: #FFFFFF;
+                    }
+                    &:focus {
+                        outline: 0;
+                    }
+                    &:hover {
+                        transform: scale(.96);
+                    }
+                }
+            }
+        }
+    }
+    .container-hero {
+        height: 100vh;
+        padding: 24px 24px;
+        width: 50%;
+        .hero-description {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%), url('../img/hero.jpg') no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 16px;
+            height: 100%;
+            padding: 16px 24px;
+            display: flex;
+            align-items: flex-end;
+            .description-content {
+                h2 {
+                    color: #FFFFFF;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+                p {
+                    color: #FFFFFF;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper-container {
+        .container-content {
+            width: 60%;
+            .content-description {
+                padding: 24px 48px;
+            }
+        }
+        .container-hero {
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper-container {
+        .container-content {
+            width: 100%;
+            .content-description {
+                padding: 48px 24px;
+                .description-form {
+                    input, button {
+                        padding: 16px 16px;
+                    }
+                    .form-split {
+                        align-items: flex-start;
+                        gap: 8px 0;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+        .container-hero {
+            display: none;
+        }
+    }
+}
