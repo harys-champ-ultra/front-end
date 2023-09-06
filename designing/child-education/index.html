@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | NewsLetter.</title>
+    <!-- EXTERNAL CSS LINK -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+
+    <!-- HEADER LAYOUT -->
+    <header>
+        <!-- LOGOS -->
+        <div id="banner">
+            <nav>
+                <ul>
+                    <li><a href="./" class="logo">NewsLetter<span>.</span></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="active">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- NAVIGATION -->
+        <div id="link">
+            <nav>
+                <ul>
+                    <li><a href="./" class="active">Home</a></li>
+                    <li><a href="html/newsroom.html">Newsroom</a></li>
+                    <li><a href="html/blog.html">Blog</a></li>
+                    <li><a href="html/success.html">Success Stories</a></li>
+                    <li><a href="html/franchise.html">Own a Franchise</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- HAMBURGER -->
+        <div id="hbg">
+            <nav>
+                <ul>
+                    <li><a id="hbgBtn">
+                        <svg width="42" height="16" viewBox="0 0 42 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 2L40 2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"/>
+                            <path d="M2 14L40 14" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"/>
+                        </svg>
+                    </a></li>
+                </ul>
+                <ul id="hbgLinks">
+                    <li><a href="./" class="active">Home</a></li>
+                    <li><a href="html/newsroom.html">Newsroom</a></li>
+                    <li><a href="html/blog.html">Blog</a></li>
+                    <li><a href="html/success.html">Success Stories</a></li>
+                    <li><a href="html/franchise.html">Own a Franchise</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- MAIN LAYOUT -->
+    <main>
+        <!-- HERO TEXTS -->
+        <div class="hero-content">
+            <h1>Come See How Can <span>Benefit Your Kids.</span></h1>
+            <p>The instructor will prepare an individualized lesson plan for your kids and support them as they progress through it.</p>
+        </div>
+        <!-- VIDEO CROUSAL -->
+        <div class="crousal-content">
+            <figure>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kok6AKf1d_g" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
+        </div>
+        <!-- SECONDARY TEXTS -->
+        <div class="secondary-content">
+            <h2>Reduced Centre Capacity.</h2>
+            <p>In order to ensure that the minimum physical distancing standard is maintained, we have implemented a comprehensive scheduling system and limited our classroom capacity. Each student studying in-centre will be assigned their own table.</p>
+            <br>
+            <h2>Facemasks for Staff</h2>
+            <p>Staff members will wear masks at all times, regardless of whether or not they interact with students directly.</p>
+            <a href="https://www.kumon.com/ca-en/calgary-savanna" target="_blank">More info</a>
+        </div>
+        <!-- IMAGES CROUSAL -->
+        <div class="crousal-content">
+            <figure>
+                <img id="crousal" src="#" alt="crousal">
+            </figure>
+            <div class="navigator">
+                <button id="left" onclick="showPrevImage()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 7L9 12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 12L14 17" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                </button>
+                <button id="right" onclick="showNextImage()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 17L15 12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 12L10 7" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                </button>
+            </div>
+        </div>
+        <!-- GRID BOXES -->
+        <div class="grid-content">
+            <div class="content-divider">
+                <section>
+                    <figure>
+                        <img src="./media/carousel1.png" alt="Newsroom">
+                    </figure>
+                    <div class="text">
+                        <h2><a href="./html/newsroom.html">Newsroom</a></h2>
+                        <p>It Inspires Future Generation of Leaders at Inaugural Student Conference...</p>
+                    </div>
+                </section>
+                <section>
+                    <figure>
+                        <img src="./media/carousel3.png" alt="Blog">
+                    </figure>
+                    <div class="text">
+                        <h2 class="yellow"><a href="./html/blog.html">Blog</a></h2>
+                        <p>Developing a Reward System at home...</p>
+                    </div>
+                </section>
+                <section>
+                    <figure>
+                        <img src="./media/carousel2.png" alt="Success">
+                    </figure>
+                    <div class="text">
+                        <h2 class="green"><a href="./html/success.html">Success Stories</a></h2>
+                        <p>Stories about REAL students and their success in school and beyond....</p>
+                    </div>
+                </section>
+                <section>
+                    <figure>
+                        <img src="./media/carousel4.png" alt="Franchise">
+                    </figure>
+                    <div class="text">
+                        <h2 class="pink"><a href="./html/franchise.html">Own a Franchise</a></h2>
+                        <p>Build a successful business while making an impact on the lives of children...</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- FOOTER LAYOUT -->
+    <footer>
+        <nav>
+            <ul>
+                <li><p>Company</p></li>
+                <li><a href="./" class="logo">NewsLetter<span>.</span></a></li>
+            </ul>
+            <ul>
+                <li><p>Links</p></li>
+                <li><a href="./">Home</a></li>
+                <li><a href="html/newsroom.html">Newsroom</a></li>
+                <li><a href="html/blog.html">Blog</a></li>
+                <li><a href="html/success.html">Success Stories</a></li>
+                <li><a href="html/franchise.html">Own a Franchise</a></li>
+            </ul>
+            <ul>
+                <li><p>Social</p></li>
+                <li><a href="http://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="http://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="http://instagram.com" target="_blank">Instagram</a></li>
+            </ul>
+            <ul>
+                <li><p>Privacy</p></li>
+                <li><a href="#">Terms of Services</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <nav class="copyright">
+            <ul>
+                <li><p>Copyright &copy; 2022. All rights reserved.</p></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+    <!-- EXTERNAL JAVASCRIPT LINK -->
+    <script src="./js/script.js"></script>
+
+    
+</body>
+</html>
