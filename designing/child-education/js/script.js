@@ -3,46 +3,51 @@
 const hbg = document.getElementById("hbgBtn");
 let count = 0;
 // ONCE, BUTTON CLICKED, CALLS A FUNCTION
-hbg.onclick = function() {
+hbg.onclick = () => {
     count++;
     // EVENLY
-    if(count%2==0) {
+    if (count % 2 == 0) {
         document.getElementById("hbgLinks").style.display = "none";
-    // ODDLY
+        // ODDLY
     } else {
         document.getElementById("hbgLinks").style.display = "flex";
     }
 }
 
 
-
-// ----------------------------------------------------------------------------------------------------------------------
-
-
-
-// CROUSAL IMAGES
+// CAROUSEL IMAGES
 // SAVE IMAGE OBJECTS IN ARRAY
 const images = [
-    { img: '../media/carouselHome.png' },
-    { img: '../media/carousel1.png' },
-    { img: '../media/carousel2.png' },
-    { img: '../media/carousel3.png' },
-    { img: '../media/carousel4.png' }
+    { img: 'media/carouselHome.png' },
+    { img: 'media/carousel1.png' },
+    { img: 'media/carousel2.png' },
+    { img: 'media/carousel3.png' },
+    { img: 'media/carousel4.png' }
 ];
 
 // GET IMAGE ELEMENT BY ID FROM HTML
-const img = document.getElementById('crousal');
+const img = document.getElementById("carousel");
 let index = 0;
 
 // FOR NEXT IMAGE
-function showNextImage() {
-    const image = images[index++];
+const showNextImage = () => {
+    if (index < images.length - 1) {
+        index++;
+    } else {
+        index = 0; // Loop back to the first image if at the end.
+    }
+    const image = images[index];
     img.src = image.img;
 }
 
 // FOR PREVIOUS IMAGE
-function showPrevImage() {
-    const image = images[index--];
+const showPrevImage = () => {
+    if (index > 0) {
+        index--;
+    } else {
+        index = images.length - 1; // Loop to the last image if at the beginning.
+    }
+    const image = images[index];
     img.src = image.img;
 }
 

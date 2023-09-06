@@ -1,6 +1,5 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,65 +11,47 @@ body {
   background-color: #F0F2F5;
   height: 100vh;
 }
-
 .wrapper-hero .hero-content {
   padding: 0 56px;
   max-width: 1080px;
   margin: 0 auto;
 }
-
 .wrapper-hero .hero-content .content-left {
   float: left;
   width: 50%;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 100vh;
 }
-
 .wrapper-hero .hero-content .content-left img {
   height: 106px;
   margin: -35px -28px;
 }
-
 .wrapper-hero .hero-content .content-left h2 {
   font-size: 28px;
   font-weight: 500;
   color: #1C1E21;
 }
-
 .wrapper-hero .hero-content .content-right {
   float: left;
   width: 50%;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 100vh;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  justify-content: right;
 }
-
 .wrapper-hero .hero-content .content-right .right-side {
   text-align: center;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ffffff;
-  display: -ms-grid;
   display: grid;
   padding: 8px 16px;
   border-radius: 8px;
   width: 400px;
-  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
-
 .wrapper-hero .hero-content .content-right .right-side form input, .wrapper-hero .hero-content .content-right .right-side form button {
   margin: 8px auto;
   border-radius: 6px;
@@ -79,11 +60,9 @@ body {
   border: 1px solid #dddddd;
   width: 100%;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form input {
   color: #1C1E21;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form input[type=submit] {
   background-color: #1877F2;
   border: 0;
@@ -91,11 +70,9 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form input[type=submit]:hover {
   background-color: #0a68e4;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form input[type=submit].signup {
   background-color: #42B72A;
   border: 0;
@@ -103,40 +80,33 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form input[type=submit].signup:hover {
   background-color: #36A420;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form input:focus {
   outline: 0;
   border: 1px solid #1877F2;
   background-color: #E8F0FE;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form input[type=submit]:focus {
   border: 0;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form a {
   text-decoration: none;
   color: #1877F2;
   font-size: 14px;
   margin: 8px 0;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form a:hover {
   text-decoration: underline;
   color: #0a68e4;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form hr {
   width: 100%;
   border: 0;
   height: 1px;
   background-color: #dddddd;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form button {
   background-color: #42B72A;
   cursor: pointer;
@@ -145,7 +115,6 @@ body {
   font-weight: 600;
   width: 60%;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form button.signin {
   background-color: #1877F2;
   cursor: pointer;
@@ -154,73 +123,54 @@ body {
   font-weight: 600;
   width: 60%;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form button:focus {
   outline: 0;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form button:hover {
   background-color: #36A420;
 }
-
 .wrapper-hero .hero-content .content-right .right-side form button.signin:hover {
   background-color: #0a68e4;
 }
-
 .wrapper-hero .hero-content .content-right .right-side span {
   font-size: 14px;
   color: #1C1E21;
 }
-
 .wrapper-hero .hero-content .content-right .right-side span a {
   font-weight: 600;
   text-decoration: none;
   color: #1C1E21;
 }
-
 .wrapper-hero .hero-content .content-right .right-side span a:hover {
   text-decoration: underline;
 }
-
 .wrapper-hero .hero-content .content-center {
   height: 100vh;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
-
 .wrapper-hero .hero-content .content-center .center-side {
   width: 100%;
 }
-
 .wrapper-hero .hero-content .content-center .center-side img {
   height: 84.84px;
   margin: -4px -28px;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ffffff;
-  display: -ms-grid;
   display: grid;
   padding: 8px 16px;
   border-radius: 8px;
   width: 400px;
-  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
-
 .wrapper-hero .hero-content .content-center .center-side form p {
   font-size: 18px;
   color: #1C1E21;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form input, .wrapper-hero .hero-content .content-center .center-side form button {
   margin: 8px auto;
   border-radius: 6px;
@@ -229,11 +179,9 @@ body {
   border: 1px solid #dddddd;
   width: 100%;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form input {
   color: #1C1E21;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form input[type=submit] {
   background-color: #1877F2;
   border: 0;
@@ -241,47 +189,39 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form input[type=submit]:hover {
   background-color: #0a68e4;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form input:focus {
   outline: 0;
   border: 1px solid #1877F2;
   background-color: #E8F0FE;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form input[type=submit]:focus {
   border: 0;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form span {
   font-size: 14px;
   color: #f02849;
   margin: 4px 0;
   text-align: left;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form a {
   text-decoration: none;
   color: #1877F2;
   font-size: 14px;
   margin: 8px 0;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form a:hover {
   text-decoration: underline;
   color: #0a68e4;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form hr {
   width: 100%;
   border: 0;
   height: 1px;
   background-color: #dddddd;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form button {
   background-color: #42B72A;
   cursor: pointer;
@@ -290,11 +230,9 @@ body {
   font-weight: 600;
   width: 60%;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form button:focus {
   outline: 0;
 }
-
 .wrapper-hero .hero-content .content-center .center-side form button:hover {
   background-color: #36A420;
 }
@@ -307,14 +245,10 @@ body {
     font-size: 24px;
   }
 }
-
 @media screen and (max-width: 809px) {
   .wrapper-hero {
-    display: -ms-grid;
     display: grid;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .wrapper-hero .hero-content .content-left, .wrapper-hero .hero-content .content-right {
     text-align: center;
@@ -335,7 +269,6 @@ body {
     width: 100%;
   }
 }
-
 @media screen and (max-width: 448px) {
   .wrapper-hero .hero-content .content-center {
     width: 100%;
@@ -346,5 +279,4 @@ body {
   .wrapper-hero .hero-content .content-center .center-side form button {
     width: 100%;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
