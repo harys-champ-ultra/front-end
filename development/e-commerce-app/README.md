@@ -12,3 +12,7 @@
     - Register.js
     - Header.js
     - Footer.js
+
+### img
+    - hero.jpg
+    - etc
