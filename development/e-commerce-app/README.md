@@ -1,22 +1,23 @@
 # E-Commerce App with React
 
+- Build: Vite
 - Framework: React
-- Variant: TypeScript 
+- Variant: JavScript 
 
 ## Directories:
 
 - src
-   - App.tsx
+   - App.jsx
 - components
    - structured
-      - ProductList.tsx
-      - ProductDetail.tsx
-      - Cart.tsx
-      - Checkout.tsx
-      - Login.tsx
-      - Register.tsx
-      - Header.tsx
-      - Footer.tsx
+      - ProductList.jsx
+      - ProductDetail.jsx
+      - Cart.jsx
+      - Checkout.jsx
+      - Login.jsx
+      - Register.jsx
+      - Header.jsx
+      - Footer.jsx
    - styled
       - ProductList.scss
       - ProductDetail.scss
