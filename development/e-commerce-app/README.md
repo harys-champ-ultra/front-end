@@ -1,18 +1,33 @@
-# React + JavaScript + Vite
+# E-Commerce App with React
 
-## src
-- App.js
+- Framework: React
+- Variant: TypeScript 
 
-### components
-    - ProductList.js
-    - ProductDetail.js
-    - Cart.js
-    - Checkout.js
-    - Login.js
-    - Register.js
-    - Header.js
-    - Footer.js
+## Directories:
 
-### img
-    - hero.jpg
-    - etc
+- src
+   - App.tsx
+- components
+   - structured
+      - ProductList.tsx
+      - ProductDetail.tsx
+      - Cart.tsx
+      - Checkout.tsx
+      - Login.tsx
+      - Register.tsx
+      - Header.tsx
+      - Footer.tsx
+   - styled
+      - ProductList.scss
+      - ProductDetail.scss
+      - Cart.scss
+      - Checkout.scss
+      - Login.scss
+      - Register.scss
+      - Header.scss
+      - Footer.scss
+- img
+   - icons
+      - hamburger.svg
+   - media
+      - hero.svg
