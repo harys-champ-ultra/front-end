@@ -91,7 +91,7 @@ body {
 .wrapper-section .section-content .content-grid {
   align-items: flex-start;
   display: grid;
-  gap: 16px 0;
+  gap: 16px 24px;
   border-bottom: 1px solid #AAAAAA;
 }
 .wrapper-section .section-content .content-grid:last-child {
@@ -183,6 +183,9 @@ body {
   .wrapper-heading .heading-content, .wrapper-heading .section-content, .wrapper-section .heading-content, .wrapper-section .section-content {
     padding: 48px 48px;
   }
+  .wrapper-heading .heading-content .content-grid, .wrapper-heading .section-content .content-grid, .wrapper-section .heading-content .content-grid, .wrapper-section .section-content .content-grid {
+    gap: 0 24px;
+  }
   .wrapper-heading .heading-content .content-grid.triple, .wrapper-heading .section-content .content-grid.triple, .wrapper-section .heading-content .content-grid.triple, .wrapper-section .section-content .content-grid.triple {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -210,16 +213,19 @@ body {
     margin: 0;
   }
   .wrapper-heading .heading-content, .wrapper-heading .section-content, .wrapper-section .heading-content, .wrapper-section .section-content {
-    padding: 48px 24px;
+    padding: 40px 24px;
   }
   .wrapper-heading .heading-content .content-grid, .wrapper-heading .section-content .content-grid, .wrapper-section .heading-content .content-grid, .wrapper-section .section-content .content-grid {
     gap: 0;
   }
-  .wrapper-heading .heading-content .content-grid.double ul:nth-of-type(2), .wrapper-heading .section-content .content-grid.double ul:nth-of-type(2), .wrapper-section .heading-content .content-grid.double ul:nth-of-type(2), .wrapper-section .section-content .content-grid.double ul:nth-of-type(2) {
-    margin-top: -16px;
-  }
   .wrapper-heading .heading-content .content-grid.double, .wrapper-heading .heading-content .content-grid.triple, .wrapper-heading .section-content .content-grid.double, .wrapper-heading .section-content .content-grid.triple, .wrapper-section .heading-content .content-grid.double, .wrapper-section .heading-content .content-grid.triple, .wrapper-section .section-content .content-grid.double, .wrapper-section .section-content .content-grid.triple {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .wrapper-heading .heading-content .content-grid.double ul, .wrapper-heading .heading-content .content-grid.triple ul, .wrapper-heading .section-content .content-grid.double ul, .wrapper-heading .section-content .content-grid.triple ul, .wrapper-section .heading-content .content-grid.double ul, .wrapper-section .heading-content .content-grid.triple ul, .wrapper-section .section-content .content-grid.double ul, .wrapper-section .section-content .content-grid.triple ul {
+    margin-bottom: -16px;
+  }
+  .wrapper-heading .heading-content .content-grid.double ul:last-child, .wrapper-heading .heading-content .content-grid.triple ul:last-child, .wrapper-heading .section-content .content-grid.double ul:last-child, .wrapper-heading .section-content .content-grid.triple ul:last-child, .wrapper-section .heading-content .content-grid.double ul:last-child, .wrapper-section .heading-content .content-grid.triple ul:last-child, .wrapper-section .section-content .content-grid.double ul:last-child, .wrapper-section .section-content .content-grid.triple ul:last-child {
+    margin: 0;
   }
   .wrapper-end .end-content {
     padding: 16px 24px;
@@ -238,5 +244,12 @@ body {
   }
   .wrapper-section .section-content .content-grid ul li a {
     font-size: 16px;
+  }
+  .wrapper-end .end-content {
+    padding: 40px 24px;
+  }
+  .wrapper-end .end-content .content-grid {
+    flex-direction: column;
+    gap: 24px 0;
   }
 }/*# sourceMappingURL=main.css.map */

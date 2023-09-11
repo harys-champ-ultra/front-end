@@ -92,7 +92,7 @@ body {
         .content-grid {
             align-items: flex-start;
             display: grid;
-            gap: 16px 0;
+            gap: 16px 24px;
             border-bottom: 1px solid #AAAAAA;
             &:last-child {
                 border-bottom: 0;
@@ -195,6 +195,7 @@ body {
         .heading-content, .section-content {
             padding: 48px 48px;
             .content-grid {
+                gap: 0 24px;
                 &.triple {
                     grid-template-columns: repeat(2, 1fr);
                 }
@@ -231,18 +232,17 @@ body {
     }
     .wrapper-heading, .wrapper-section {
         .heading-content, .section-content {
-            padding: 48px 24px;
+            padding: 40px 24px;
             .content-grid {
                 gap: 0;
-                &.double {
-                    ul {
-                        &:nth-of-type(2) {
-                            margin-top: -16px;
-                        }
-                    }
-                }
                 &.double, &.triple {
                     grid-template-columns: repeat(1, 1fr);
+                    ul {
+                        margin-bottom: -16px;
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
                 }
             }
         }
@@ -281,6 +281,16 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+    .wrapper-end {
+        .end-content {
+            padding: 40px 24px;
+            .content-grid {
+                flex-direction: column;
+                gap: 24px 0;
+                
             }
         }
     }
