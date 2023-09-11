@@ -8,7 +8,7 @@ const Projects = () => {
         },
         {
             "name": "Interactive Resume",
-            "url": "https://github.com/harys-champ-ultra/front-end/interactive-resume-react",
+            "url": "https://github.com/harys-champ-ultra/front-end/tree/main/development/interactive-resume-react",
             "languages": "React, SCSS",
             "description": "A web-based resume that allows users to explore a dynamic representation of skills, experience, and achievements."
         },
