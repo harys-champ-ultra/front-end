@@ -1,8 +1,13 @@
-# React + Vite
+# Interactive Resume React
+A web-based resume that allows users to explore a dynamic representation of skills, experience, and achievements.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Build: Vite
+- Framework: React
+- Variant: JavScript 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Main Components
+- Education
+- Skills
+- Experience
+- Projects
+- Certificates
