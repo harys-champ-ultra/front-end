@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: black;
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.wrap-img {
+  background: url("../320x50/BE01077_Magiclean-Hygiene-plus-Digital-banner_320x50_0011_bg.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 50px;
+  position: relative;
+  width: 320px;
+}
+.wrap-img figure {
+  margin: 0 auto;
+  position: absolute;
+}
+.wrap-img figure img {
+  display: grid;
+}
+.wrap-img figure.img-static {
+  top: 0;
+  z-index: 4;
+}
+.wrap-img figure.img-animation.a {
+  animation: a 2s ease 3;
+  left: 80px;
+  top: 13px;
+  z-index: 3;
+}
+@keyframes a {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.wrap-img figure.img-animation.b {
+  animation: b 2s ease 3 0.2s;
+  left: 230px;
+  top: 12px;
+  z-index: 3;
+}
+@keyframes b {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.24);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.wrap-img figure.img-animation.c {
+  animation: c 2s ease 3 0.6s;
+  left: 251px;
+  top: 13px;
+  z-index: 3;
+}
+@keyframes c {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.24);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.wrap-img figure.img-animation.d {
+  animation: d 3s ease 2;
+  left: 272px;
+  top: 9px;
+  z-index: 4;
+}
+@keyframes d {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.wrap-img figure.img-animation.e {
+  animation: e 3s ease 2 0.2s;
+  left: 273px;
+  top: 22px;
+  z-index: 4;
+}
+@keyframes e {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.wrap-img figure.img-animation.f {
+  left: 54px;
+  top: 25px;
+  z-index: 2;
+  animation: f 2s ease;
+}
+@keyframes f {
+  from {
+    opacity: 0;
+    transform: scale(0.4) translate(-40px, -74px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+  }
+}
+.wrap-img figure.img-animation.g {
+  left: 51px;
+  top: 22px;
+  z-index: 1;
+  animation: g 2s ease;
+}
+@keyframes g {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.wrap-img figure.img-animation.h {
+  left: 58px;
+  top: 28px;
+  z-index: 1;
+  animation: h 2s ease;
+}
+@keyframes h {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.wrap-img figure.img-animation.i {
+  left: 37px;
+  top: 27px;
+  z-index: 1;
+  animation: i 2s ease;
+}
+@keyframes i {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.wrap-img figure.img-animation.j {
+  animation: j 1s linear;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+@keyframes j {
+  0% {
+    opacity: 0;
+    transform: translateY(-2%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-1%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=style.css.map */
