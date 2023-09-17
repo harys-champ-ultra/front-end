@@ -332,9 +332,18 @@
         }
     }
 
+    .wrapper-heading,
+    .wrapper-section {
+
+        .heading-content,
+        .section-content {
+            padding: 40px 16px;
+        }
+    }
+
     .wrapper-end {
         .end-content {
-            padding: 40px 24px;
+            padding: 40px 16px;
 
             .content-grid {
                 flex-direction: column;
