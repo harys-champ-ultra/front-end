@@ -5,8 +5,9 @@ const Skills = () => {
             "items": [
                 "HTML/CSS",
                 "JavaScript",
-                "TypeScript",
-                "React"
+                "React",
+                "Git/GitHub",
+                "Npm/Vite"
             ]
         },
         {
@@ -23,25 +24,8 @@ const Skills = () => {
             "items": [
                 "Figma",
                 "Interactive Design",
-                "Responsive Design"
-            ]
-        },
-        {
-            "skill": "Testing Frameworks",
-            "items": [
-                "React Testing Library"
-            ]
-        },
-        {
-            "skill": "Version Control",
-            "items": [
-                "Git/GitHub"
-            ]
-        },
-        {
-            "skill": "Build Tools",
-            "items": [
-                "Npm/Vite"
+                "Responsive Design",
+                "Grid/Flexbox System"
             ]
         }
     ];
@@ -51,13 +35,12 @@ const Skills = () => {
                 <h2>Skills</h2>
                 <hr />
                 <div className="content-grid triple">
-                    {skillsData.map((data) => (
-                        <ul key={data.skill}>
-                            <li className="bold">{data.skill}</li>
-                            <li>{data.items[0]}</li>
-                            <li>{data.items[1]}</li>
-                            <li>{data.items[2]}</li>
-                            <li>{data.items[3]}</li>
+                    {skillsData.map((sData) => (
+                        <ul key={sData.skill}>
+                            <li className="bold">{sData.skill}</li>
+                            {sData.items.map((iData) => (
+                                <li key={iData}>{iData}</li>
+                            ))}
                         </ul>
                     ))}
                 </div>

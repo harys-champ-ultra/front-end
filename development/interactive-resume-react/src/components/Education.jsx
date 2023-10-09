@@ -2,23 +2,25 @@ const Education = () => {
     const educationData = [
         {
             "name": "Information Technology University",
-            "duration": "2022 - Present",
+            "duration": "Aug 2022 - Present",
             "education": "M.S. Computer Science",
             "coursework": [
-                "Advance Operating Systems",
+                "Advance Algorithm Analysis",
                 "Cyber Security",
                 "Advance Computer Architecture",
-                "Computer Vision"
+                "Computer Vision",
+                "Advance Operating Systems"
             ]
         },
         {
             "name": "GIFT University",
-            "duration": "2017 - 2021",
+            "duration": "Oct 2017 - Oct 2021",
             "education": "B.S. Software Engineering",
             "coursework": [
                 "Web Development",
                 "Introduction to Database Systems",
                 "Human-Computer Interaction",
+                "Artificial Intelligence",
                 "Software Design and Architecture",
                 "Computer Graphics"
             ]
@@ -29,22 +31,20 @@ const Education = () => {
             <div className="section-content">
                 <h2>Education</h2>
                 <hr />
-                {educationData.map((data) => (
-                    <div className="content-grid triple" key={data.name}>
+                {educationData.map((eData) => (
+                    <div className="content-grid triple" key={eData.name}>
                         <ul>
-                            <li className="big bold">{data.name}</li>
-                            <li>{data.duration}</li>
+                            <li className="big bold">{eData.name}</li>
+                            <li>{eData.duration}</li>
                         </ul>
                         <ul>
-                            <li className="bold">{data.education}</li>
+                            <li className="bold">{eData.education}</li>
                         </ul>
                         <ul>
                             <li className="bold">Coursework</li>
-                            <li>{data.coursework[0]}</li>
-                            <li>{data.coursework[1]}</li>
-                            <li>{data.coursework[2]}</li>
-                            <li>{data.coursework[3]}</li>
-                            <li>{data.coursework[4]}</li>
+                            {eData.coursework.map((cwData) => (
+                                <li key={cwData}>{cwData}</li>
+                            ))}
                         </ul>
                     </div>
                 ))}

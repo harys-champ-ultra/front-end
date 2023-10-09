@@ -44,6 +44,19 @@
             span {
                 font-weight: 700;
             }
+
+            a {
+                background-color: unset;
+                border: unset;
+                border-radius: unset;
+                font-size: unset;
+                margin: unset;
+                padding: unset;
+                &:hover {
+                    background-color: unset;
+                    color: #0073F7;
+                }
+            }
         }
 
         .content-description {
@@ -65,6 +78,7 @@
             img {
                 display: flex;
                 width: 50%;
+                border-radius: 100%;
             }
         }
     }
@@ -126,6 +140,10 @@
 
                     &.bold {
                         font-weight: 700;
+                    }
+
+                    &.gray {
+                        color: #606060;
                     }
 
                     span {

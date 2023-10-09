@@ -1,16 +1,25 @@
 const Experience = () => {
     const experienceData = [
         {
-            "name": "Freelance",
-            "duration": "2021 - Present",
+            "name": "Freelance/Agencies",
+            "duration": "Feb 2021 - Present",
+            "location": "Remote",
             "role": "Full-stack Developer",
-            "details": "Spearheaded front-end and back-end tasks for web apps. Collaborated cross-functionally to deliver captivating digital solutions. Translated design concepts to responsive user experiences."
+            "details": "Create neat and interactive tailored websites. I usually work with agencies, startups, and otherfreelancers such as Talents by MYM ImageWorks, and RADIO TELEVISION SUISSE (RTS)."
         },
         {
-            "name": "Information Technology University",
-            "duration": "2022 - 2023",
-            "role": "Teaching Assistant - Web Development",
+            "name": "Student Help",
+            "duration": "Fall 2022",
+            "location": "Lahore, Pakistan",
+            "role": "Teaching Assistant",
             "details": "Help students troubleshoot technical issues they encounter while working on web development projects. Offer guidance on using development tools, software, and frameworks commonly used in web development."
+        },
+        {
+            "name": "Child Protection & Welfare Bureau",
+            "duration": "Summer 2019",
+            "location": "Gujranwala, Pakistan",
+            "role": "Education Tech Leadership Intern",
+            "details": "Collaborate with CPWB management and stakeholders to develop a comprehensive computer education program tailored to the specific needs and interests of the rescued children."
         }
     ];
     return (
@@ -25,7 +34,7 @@ const Experience = () => {
                             <li>{data.duration}</li>
                         </ul>
                         <ul>
-                            <li className="bold">{data.role}</li>
+                            <li className="bold">{data.role} - {data.location}</li>
                             <li>{data.details}</li>
                         </ul>
                     </div>
