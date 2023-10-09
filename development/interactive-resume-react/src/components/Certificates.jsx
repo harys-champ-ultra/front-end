@@ -1,9 +1,9 @@
 const Certificates = () => {
     const certificatesData = [
         {
-            "name": "Technical Workshop (UrFU + TUB)",
-            "year": 2020,
-            "institute": "GIFT University"
+            "name": "Robot Operating System",
+            "year": 2022,
+            "institute": "Information Technology University"
         },
         {
             "name": "Full-Stack Development",
@@ -11,9 +11,14 @@ const Certificates = () => {
             "institute": "Arfa Trainings"
         },
         {
-            "name": "Robot Operating System",
-            "year": 2022,
-            "institute": "Information Technology University"
+            "name": "Technical Workshop (UrFU + TUB)",
+            "year": 2020,
+            "institute": "GIFT University"
+        },
+        {
+            "name": "Java Tutorial Course",
+            "year": 2019,
+            "institute": "SOLO LEARN"
         }
     ];
     return (
